@@ -1,0 +1,33 @@
+basePath: /v2
+host: petstore.swagger.io
+info:
+  contact:
+    email: ramyadmz@gmail.com
+    name: API Support
+    url: http://ramyadmz.github.io/CV/
+  description: This is a National ID API Documentation.
+  license:
+    name: Apache 2.0
+    url: http://www.apache.org/licenses/LICENSE-2.0.html
+  termsOfService: http://swagger.io/terms/
+  title: National ID API
+  version: "1.0"
+paths:
+  /ID/validation/{id}:
+    get:
+      consumes:
+      - application/json
+      description: check id validation and return city information
+      operationId: check-id
+      parameters:
+      - description: id
+        in: path
+        name: id
+        required: true
+        type: string
+      produces:
+      - text/html
+      summary: check id number
+      tags:
+      - ID
+swagger: "2.0"
